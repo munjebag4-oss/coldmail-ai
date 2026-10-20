@@ -299,6 +299,70 @@ function Pricing() {
   );
 }
 
+
+
+/* ───────── FAQ SECTION ───────── */
+function FAQ() {
+  const [open, setOpen] = useState(null);
+  const faqs = [
+    {
+      q: "How does ColdMailAI work?",
+      a: "Enter the prospect's company name, their role, and what you're offering. Choose a tone, click Generate, and get a personalized cold email in seconds. The AI analyzes the context and crafts a compelling message tailored to your prospect."
+    },
+    {
+      q: "Is it really free?",
+      a: "Yes! You get 3 free email generations per day with no signup required. If you need unlimited emails, upgrade to Pro for \$29/month."
+    },
+    {
+      q: "How do I upgrade to Pro?",
+      a: "Click any 'Upgrade to Pro' button on the site. You'll be redirected to PayPal to set up a \$29/month subscription. Once confirmed, you'll get unlimited access."
+    },
+    {
+      q: "Can I cancel my Pro subscription?",
+      a: "Yes, anytime. Log into PayPal, go to Settings > Payments > Manage Automatic Payments, and cancel ColdMailAI. No questions asked."
+    },
+    {
+      q: "Are the generated emails unique?",
+      a: "Every email is generated fresh by AI based on your specific inputs. No two emails are the same, even with identical inputs."
+    },
+    {
+      q: "What languages are supported?",
+      a: "ColdMailAI works best in English but can generate emails in most major languages. Just write your offering in your preferred language."
+    },
+    {
+      q: "Is my data stored?",
+      a: "No. We don't store your inputs or generated emails. Everything is processed in real-time and discarded after generation."
+    },
+  ];
+
+  return (
+    <section className="max-w-2xl mx-auto px-6 pb-20">
+      <h2 className="text-2xl font-bold text-center mb-8">FAQ</h2>
+      <div className="space-y-2">
+        {faqs.map((faq, i) => (
+          <div
+            key={i}
+            className="bg-[#12121a] border border-[#1e1e2e] rounded-lg overflow-hidden"
+          >
+            <button
+              onClick={() => setOpen(open === i ? null : i)}
+              className="w-full flex items-center justify-between px-5 py-4 text-left text-sm font-medium text-white hover:text-indigo-300 transition-colors"
+            >
+              {faq.q}
+              <span className="text-gray-500 ml-2">{open === i ? "−" : "+"}</span>
+            </button>
+            {open === i && (
+              <div className="px-5 pb-4 text-sm text-gray-400 leading-relaxed fade-in">
+                {faq.a}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 /* ───────── FOOTER ───────── */
 function Footer() {
   return (
@@ -333,6 +397,7 @@ export default function Home() {
       <Landing onTryNow={scrollToGenerator} />
       <Generator />
       <Pricing />
+      <FAQ />
       <Footer />
     </main>
   );
