@@ -11,7 +11,22 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="antialiased">
         {children}
-        {/* Chat widget placeholder - add Crisp/Tawk.to ID later */}
+        {/* Tawk.to Live Chat Widget */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/6ad7f89088f3d534cf48e51d/1k5dq5tht';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+              })();
+            `,
+          }}
+        />
       </body>
     </html>
   );
