@@ -225,13 +225,13 @@ function Generator() {
         {uses >= MAX_FREE && (
           <div className="mt-6 text-center fade-in">
             <p className="text-gray-500 text-sm mb-3">
-              Unlock unlimited emails for just $29/month
+              Unlock unlimited emails for just $9/month
             </p>
             <a
               href={process.env.NEXT_PUBLIC_PAYPAL_SUBSCRIBE_URL || "#"}
               className="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-6 py-2.5 rounded-lg transition-colors text-sm"
             >
-              Upgrade to Pro — $29/mo
+              Upgrade to Pro — $9/mo
             </a>
           </div>
         )}
@@ -271,7 +271,7 @@ function Pricing() {
           </div>
           <div className="text-sm text-gray-500 mb-1">Pro</div>
           <div className="text-3xl font-bold mb-4">
-            $29<span className="text-base font-normal text-gray-500">/mo</span>
+            $9<span className="text-base font-normal text-gray-500">/mo</span>
           </div>
           <ul className="space-y-2 text-sm text-gray-400">
             <li className="flex items-center gap-2">
@@ -291,7 +291,7 @@ function Pricing() {
             href={process.env.NEXT_PUBLIC_PAYPAL_SUBSCRIBE_URL || "#"}
             className="block mt-6 bg-indigo-500 hover:bg-indigo-600 text-white text-center font-semibold py-2.5 rounded-lg transition-colors text-sm"
           >
-            Start Pro — $29/mo
+            Start Pro — $9/mo
           </a>
         </div>
       </div>
@@ -311,11 +311,11 @@ function FAQ() {
     },
     {
       q: "Is it really free?",
-      a: "Yes! You get 3 free email generations per day with no signup required. If you need unlimited emails, upgrade to Pro for \$29/month."
+      a: "Yes! You get 3 free email generations per day with no signup required. If you need unlimited emails, upgrade to Pro for \$9/month."
     },
     {
       q: "How do I upgrade to Pro?",
-      a: "Click any 'Upgrade to Pro' button on the site. You'll be redirected to PayPal to set up a \$29/month subscription. Once confirmed, you'll get unlimited access."
+      a: "Click any 'Upgrade to Pro' button on the site. You'll be redirected to PayPal to set up a \$9/month subscription. Once confirmed, you'll get unlimited access."
     },
     {
       q: "Can I cancel my Pro subscription?",
